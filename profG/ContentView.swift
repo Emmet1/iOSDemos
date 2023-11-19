@@ -13,9 +13,8 @@ struct ContentView: View {
     @State private var isButtonPressedTwo = false  // State property to toggle visibility
     
     var body: some View {
-      
             Text("Front-End-Dev")
-            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+            .font(.title)
             VStack {
                 Text(messageString)
                     .font(.largeTitle)
@@ -32,13 +31,12 @@ struct ContentView: View {
                         // Buttonpressed ? value_if_true : value_if_false.
                         Text(isButtonPressed ? "" : "Awesome")  // Ternary operator to toggle text visibility
                     }
-                    
                     Button(action: {
                         // Action is performed when pressed
                         messageString = "Greatness here"
                         isButtonPressedTwo = false  // Toggle to true when button is pressed
                     }) {
-                        // Butoonpressed ? value_if_true : value_if_false.
+                        // Buttonpressed ? value_if_true : value_if_false.
                         Text(isButtonPressedTwo ? "" : "Great")  // Ternary operator to toggle text visibility
                     }
                 }
